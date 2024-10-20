@@ -4,7 +4,6 @@
 #  ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║██╔══██╗██║
 #  ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝██║  ██║╚██████╗
 #  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-#	z0mbi3			https://github.com/gh0stzk/dotfiles
 #
 
 # Show help
@@ -60,7 +59,7 @@ super + alt + o
 
 # Power off, Reboot, Log out, Lockscreen, kill an app
 ctrl + super + alt + {p,r,q,l,k}
-	{systemctl poweroff, systemctl reboot,bspc quit,ScreenLocker,xkill}
+	{systemctl poweroff, systemctl reboot,bspc quit,physlock -d,xkill}
 
 # Hide/Show Bar (Polybar and/or eww)
 super + alt + {h,u}
@@ -140,7 +139,7 @@ ctrl + alt {m,x,s,p}
 	bspc node -g {marked,locked,sticky,private}
 
 # Hide/Unhide Window
-ctrl + alt + h
+ctrl + alt + u
 	BspHideNode
 
 #####
@@ -151,7 +150,7 @@ super + r
 
 # Change focus of the Node or Swap Nodes
 shift + super {_,ctrl + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
+  bspc node -{f,s} {west,south,north,east}
 
 # Switch workspace
 super + {Left,Right}
